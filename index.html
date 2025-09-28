@@ -4,125 +4,286 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test Bootcamp Projects</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-      body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #f9fafb;
-        color: #333;
-        line-height: 1.6;
+      :root {
+        --primary-color: #2563eb;
+        --secondary-color: #1e40af;
+        --accent-color: #3b82f6;
+        --text-color: #333;
+        --light-bg: #f8fafc;
       }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        color: var(--text-color);
+        line-height: 1.7;
+      }
+
       header {
-        background: #2563eb;
+        background: var(--primary-color);
         color: #fff;
         padding: 1rem 0;
-        text-align: center;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
       header h1 {
         margin: 0;
+        font-size: 1.8rem;
       }
+
       nav {
-        margin-top: 0.5rem;
+        display: flex;
+        gap: 2rem;
       }
+
       nav a {
         color: #fff;
-        margin: 0 15px;
         text-decoration: none;
-        font-weight: bold;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
       }
+
       nav a:hover {
-        text-decoration: underline;
+        background: var(--secondary-color);
       }
+
       .hero {
-        padding: 60px 20px;
+        padding: 160px 20px 80px;
         text-align: center;
-        background: #e5edff;
+        background: linear-gradient(135deg, #e5edff 0%, #f0f7ff 100%);
       }
+
       .hero h2 {
-        margin-bottom: 10px;
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        color: var(--primary-color);
       }
+
+      .hero p {
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin: 0 auto;
+        color: #4a5568;
+      }
+
       .section {
-        padding: 40px 20px;
-        max-width: 900px;
+        padding: 80px 20px;
+      }
+
+      .section-content {
+        max-width: 1200px;
         margin: auto;
       }
-      .services {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
+
+      .section h2 {
+        text-align: center;
+        color: var(--primary-color);
+        margin-bottom: 3rem;
+        font-size: 2rem;
       }
+
+      .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+
       .card {
         background: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        flex: 1 1 250px;
-        text-align: center;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
       }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card h3 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+      }
+
+      .contact-info {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .contact-info p {
+        margin: 1rem 0;
+        font-size: 1.1rem;
+      }
+
+      .cta-button {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: var(--primary-color);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 2rem;
+        transition: background 0.3s ease;
+      }
+
+      .cta-button:hover {
+        background: var(--secondary-color);
+      }
+
       footer {
-        background: #2563eb;
+        background: var(--primary-color);
         color: #fff;
         text-align: center;
-        padding: 20px 10px;
+        padding: 40px 20px;
+      }
+
+      @media (max-width: 768px) {
+        .header-content {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        nav {
+          margin-top: 1rem;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .hero {
+          padding: 120px 20px 60px;
+        }
+
+        .hero h2 {
+          font-size: 2rem;
+        }
       }
     </style>
   </head>
   <body>
     <header>
-      <h1>Test Bootcamp Projects</h1>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <div class="container">
+        <div class="header-content">
+          <h1>Test Bootcamp Projects</h1>
+          <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </div>
+      </div>
     </header>
 
     <section id="home" class="hero">
-      <h2>Welcome to Test Bootcamp Projects</h2>
-      <p>
-        Building skills. Delivering solutions. Empowering future cloud
-        engineers.
-      </p>
+      <div class="container">
+        <h2>Welcome to Test Bootcamp Projects</h2>
+        <p>
+          Building skills. Delivering solutions. Empowering future cloud
+          engineers.
+        </p>
+        <a href="#contact" class="cta-button">Get Started</a>
+      </div>
     </section>
 
     <section id="about" class="section">
-      <h2>About Us</h2>
-      <p>
-        Test Bootcamp Projects is a learning initiative showcasing cloud,
-        DevOps, and automation projects. This site demonstrates hosting with
-        GitHub Pages and linking with a custom domain
-        <strong>testbootcampprojects.website</strong>.
-      </p>
+      <div class="section-content">
+        <h2>About Us</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto">
+          Test Bootcamp Projects is a learning initiative showcasing cloud,
+          DevOps, and automation projects. We are committed to providing
+          hands-on experience with modern technologies and best practices. This
+          site demonstrates hosting with GitHub Pages and linking with a custom
+          domain
+          <strong>testbootcampprojects.website</strong>.
+        </p>
+      </div>
     </section>
 
-    <section id="services" class="section">
-      <h2>Our Services</h2>
-      <div class="services">
-        <div class="card">
-          <h3>Cloud Projects</h3>
-          <p>Hands-on GCP and Terraform solutions with real-world scenarios.</p>
-        </div>
-        <div class="card">
-          <h3>DevOps CI/CD</h3>
-          <p>Building pipelines, Docker images, and Kubernetes deployments.</p>
-        </div>
-        <div class="card">
-          <h3>Learning Resources</h3>
-          <p>Guides, cheat sheets, and tutorials to accelerate learning.</p>
+    <section id="services" class="section" style="background: var(--light-bg)">
+      <div class="section-content">
+        <h2>Our Services</h2>
+        <div class="services">
+          <div class="card">
+            <h3>Cloud Projects</h3>
+            <p>
+              Hands-on GCP and Terraform solutions with real-world scenarios.
+              Learn cloud architecture and infrastructure as code through
+              practical examples.
+            </p>
+          </div>
+          <div class="card">
+            <h3>DevOps CI/CD</h3>
+            <p>
+              Master modern DevOps practices with hands-on experience in
+              building pipelines, containerization with Docker, and
+              orchestration using Kubernetes.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Learning Resources</h3>
+            <p>
+              Access comprehensive guides, practical cheat sheets, and
+              step-by-step tutorials designed to accelerate your learning
+              journey in cloud and DevOps.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="contact" class="section">
-      <h2>Contact Us</h2>
-      <p>Email: info@testbootcampprojects.website</p>
-      <p>Location: Toronto, Ontario</p>
+      <div class="section-content">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+          <p>
+            Ready to start your cloud and DevOps journey? Get in touch with us!
+          </p>
+          <p><strong>Email:</strong> info@testbootcampprojects.website</p>
+          <p><strong>Location:</strong> Toronto, Ontario</p>
+          <a href="mailto:info@testbootcampprojects.website" class="cta-button">
+            Reach Out Today
+          </a>
+        </div>
+      </div>
     </section>
 
     <footer>
-      <p>© 2025 Test Bootcamp Projects. All Rights Reserved.</p>
+      <div class="container">
+        <p>© 2025 Test Bootcamp Projects. All Rights Reserved.</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem">
+          Empowering the next generation of cloud engineers
+        </p>
+      </div>
     </footer>
   </body>
 </html>
