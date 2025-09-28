@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Circle background -->
+    <circle cx="24" cy="24" r="24" fill="#0095E8"/>
+    <!-- Y5 text -->
+    <text x="10" y="32" font-family="Poppins, sans-serif" font-size="24" font-weight="600" fill="white">Y5</text>
+</svg>

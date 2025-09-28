@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="300" viewBox="0 0 600 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background pattern -->
+    <rect width="600" height="300" fill="#252525"/>
+    
+    <!-- Abstract network pattern -->
+    <path d="M50 50L150 150M150 150L250 50M150 150L50 250M150 150L250 250" 
+          stroke="#0095E8" stroke-width="1" opacity="0.1"/>
+    <path d="M350 50L450 150M450 150L550 50M450 150L350 250M450 150L550 250" 
+          stroke="#0095E8" stroke-width="1" opacity="0.1"/>
+    
+    <!-- Decorative dots -->
+    <circle cx="150" cy="150" r="4" fill="#0095E8" opacity="0.8"/>
+    <circle cx="450" cy="150" r="4" fill="#0095E8" opacity="0.8"/>
+    
+    <!-- Animated elements -->
+    <circle cx="150" cy="150" r="8" fill="#0095E8" opacity="0.2">
+        <animate attributeName="r" values="8;12;8" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.2;0.1;0.2" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="450" cy="150" r="8" fill="#0095E8" opacity="0.2">
+        <animate attributeName="r" values="8;12;8" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.2;0.1;0.2" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+    </circle>
+</svg>

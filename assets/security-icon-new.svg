@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M30 5L10 15V30C10 42 18 52 30 55C42 52 50 42 50 30V15L30 5Z" fill="#00C3FF" fill-opacity="0.1"/>
+    <path d="M30 5L10 15V30C10 42 18 52 30 55C42 52 50 42 50 30V15L30 5Z" stroke="#00C3FF" stroke-width="2"/>
+    <path d="M25 30C25 27.2386 27.2386 25 30 25C32.7614 25 35 27.2386 35 30V35H25V30Z" stroke="#00C3FF" stroke-width="2"/>
+    <rect x="22" y="35" width="16" height="12" rx="2" fill="#00C3FF"/>
+    <circle cx="30" cy="41" r="2" fill="white"/>
+</svg>
