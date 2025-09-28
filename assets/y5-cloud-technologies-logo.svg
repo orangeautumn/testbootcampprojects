@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Y5 Cloud Technologies Logo</title>
+  <desc id="desc">A minimal blue cloud icon with white Y5 lettering and the words CLOUD TECHNOLOGIES underneath.</desc>
+
+  <!-- Colors -->
+  <defs>
+    <style>
+      .cloud { fill: #1e88e5; }       /* Primary blue */
+      .brand { fill: #ffffff; }       /* White */
+      .text  { fill: #1a1a1a; }       /* Dark gray/black */
+    </style>
+  </defs>
+
+  <!-- Cloud icon built from simple shapes -->
+  <g transform="translate(0, -10)">
+    <circle cx="260" cy="300" r="110" class="cloud"/>
+    <circle cx="400" cy="280" r="140" class="cloud"/>
+    <circle cx="540" cy="305" r="120" class="cloud"/>
+    <rect x="220" y="320" width="360" height="120" rx="60" class="cloud"/>
+  </g>
+
+  <!-- Y5 lettering inside the cloud -->
+  <text x="400" y="330" text-anchor="middle" class="brand"
+        font-family="Inter, Segoe UI, Roboto, Arial, sans-serif"
+        font-weight="800" font-size="140">Y5</text>
+
+  <!-- Company name below -->
+  <text x="400" y="470" text-anchor="middle" class="text"
+        font-family="Inter, Segoe UI, Roboto, Arial, sans-serif"
+        font-weight="800" font-size="56" letter-spacing="3">CLOUD</text>
+  <text x="400" y="520" text-anchor="middle" class="text"
+        font-family="Inter, Segoe UI, Roboto, Arial, sans-serif"
+        font-weight="600" font-size="28" letter-spacing="4">TECHNOLOGIES</text>
+</svg>
