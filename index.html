@@ -3,197 +3,444 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test Bootcamp Projects</title>
+    <title>Y5 Cloud Technologies Ltd</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <style>
-      :root {
-        --primary-color: #2563eb;
-        --secondary-color: #1e40af;
-        --accent-color: #3b82f6;
-        --text-color: #333;
-        --light-bg: #f8fafc;
-      }
+        :root {
+          --primary-color: #1a1a1a;
+          --secondary-color:    <header>
+        <div class="container">
+          <div class="header-content">
+            <div class="logo-container">
+              <img src="assets/logo-A1aKOG74QWhboeLG.png" alt="Y5 Cloud Technologies Logo">
+              <h1>Y5 Cloud Technologies Ltd</h1>
+            </div>
+            <nav>
+              <a href="#home">Home</a>
+              <a href="#about">About</a>
+              <a href="#services">Services</a>
+              <a href="#contact">Contact</a>
+            </nav>
+          </div>
+        </div>
+      </header>  --accent-color: #00c3ff;
+          --text-color: #ffffff;
+          --light-bg: #252525;
+          --light-text: #b3b3b3;
+          --white: #ffffff;
+          --dark-bg: #121212;
+          --gradient-bg: linear-gradient(
+            135deg,
+            rgba(0, 195, 255, 0.1) 0%,
+            rgba(0, 89, 179, 0.1) 100%
+          );
+        }
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
 
-      body {
-        font-family: "Poppins", sans-serif;
-        color: var(--text-color);
-        line-height: 1.7;
-      }
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
 
-      header {
-        background: var(--primary-color);
-        color: #fff;
-        padding: 1rem 0;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1000;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      }
+        body {
+          font-family: "Poppins", sans-serif;
+          color: var(--text-color);
+          line-height: 1.7;
+          overflow-x: hidden;
+          background-color: var(--primary-color);
+        }
 
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
+        .animate {
+          animation: fadeIn 1s ease forwards;
+        }
 
-      .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
+        header {
+          background: var(--dark-bg);
+          color: var(--text-color);
+          padding: 1.5rem 0;
+          position: fixed;
+          width: 100%;
+          top: 0;
+          z-index: 1000;
+          box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+        }
 
-      header h1 {
-        margin: 0;
-        font-size: 1.8rem;
-      }
+        .logo-container {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+        }
 
-      nav {
-        display: flex;
-        gap: 2rem;
-      }
+        .logo-container img {
+          height: 40px;
+          width: auto;
+        }
 
-      nav a {
-        color: #fff;
-        text-decoration: none;
-        font-weight: 500;
-        transition: all 0.3s ease;
-        padding: 0.5rem 1rem;
-        border-radius: 4px;
-      }
+        .badges-container {
+          display: flex;
+          gap: 2rem;
+          justify-content: center;
+          margin-top: 3rem;
+        }
 
-      nav a:hover {
-        background: var(--secondary-color);
-      }
+        .badge {
+          height: 60px;
+          width: auto;
+          opacity: 0.8;
+          transition: opacity 0.3s ease;
+        }
 
-      .hero {
-        padding: 160px 20px 80px;
-        text-align: center;
-        background: linear-gradient(135deg, #e5edff 0%, #f0f7ff 100%);
-      }
+        .badge:hover {
+          opacity: 1;
+        }
 
-      .hero h2 {
-        font-size: 2.5rem;
-        margin-bottom: 1.5rem;
-        color: var(--primary-color);
-      }
+        .container {
+          max-width: 1400px;
+          margin: 0 auto;
+          padding: 0 30px;
+        }
 
-      .hero p {
-        font-size: 1.2rem;
-        max-width: 800px;
-        margin: 0 auto;
-        color: #4a5568;
-      }
-
-      .section {
-        padding: 80px 20px;
-      }
-
-      .section-content {
-        max-width: 1200px;
-        margin: auto;
-      }
-
-      .section h2 {
-        text-align: center;
-        color: var(--primary-color);
-        margin-bottom: 3rem;
-        font-size: 2rem;
-      }
-
-      .services {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-        margin-top: 40px;
-      }
-
-      .card {
-        background: #fff;
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease;
-      }
-
-      .card:hover {
-        transform: translateY(-5px);
-      }
-
-      .card h3 {
-        color: var(--primary-color);
-        margin-bottom: 1rem;
-      }
-
-      .contact-info {
-        text-align: center;
-        max-width: 600px;
-        margin: 0 auto;
-      }
-
-      .contact-info p {
-        margin: 1rem 0;
-        font-size: 1.1rem;
-      }
-
-      .cta-button {
-        display: inline-block;
-        padding: 1rem 2rem;
-        background: var(--primary-color);
-        color: #fff;
-        text-decoration: none;
-        border-radius: 5px;
-        margin-top: 2rem;
-        transition: background 0.3s ease;
-      }
-
-      .cta-button:hover {
-        background: var(--secondary-color);
-      }
-
-      footer {
-        background: var(--primary-color);
-        color: #fff;
-        text-align: center;
-        padding: 40px 20px;
-      }
-
-      @media (max-width: 768px) {
         .header-content {
-          flex-direction: column;
-          text-align: center;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        header h1 {
+          margin: 0;
+          font-size: 1.8rem;
+          font-weight: 600;
+          color: var(--text-color);
         }
 
         nav {
-          margin-top: 1rem;
-          flex-wrap: wrap;
-          justify-content: center;
+          display: flex;
+          gap: 3rem;
+        }
+
+        nav a {
+          color: var(--text-color);
+          text-decoration: none;
+          font-weight: 500;
+          transition: all 0.3s ease;
+          position: relative;
+        }
+
+        nav a::after {
+          content: "";
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background: var(--accent-color);
+          transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+          width: 100%;
         }
 
         .hero {
-          padding: 120px 20px 60px;
+          padding: 200px 0 100px;
+          background: var(--dark-bg);
+          position: relative;
+          overflow: hidden;
+          background-image: url('assets/photo-1510751007277-36932aac9ebd');
+          background-size: cover;
+          background-position: center;
+          background-attachment: fixed;
+        }
+
+        .hero::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(
+            45deg,
+            rgba(0, 0, 0, 0.85) 0%,
+            rgba(0, 0, 0, 0.75) 100%
+          );
+          z-index: 1;
+        }
+        .hero-content {
+          position: relative;
+          z-index: 2;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 4rem;
+          align-items: center;
+        }
+
+        .hero-text {
+          text-align: left;
         }
 
         .hero h2 {
-          font-size: 2rem;
+          font-size: 3.5rem;
+          line-height: 1.2;
+          margin-bottom: 2rem;
+          color: var(--accent-color);
+          font-weight: 700;
+          text-shadow: 0 0 10px rgba(0, 195, 255, 0.3);
         }
-      }
+
+        .hero p {
+          font-size: 1.2rem;
+          color: var(--light-text);
+          margin-bottom: 3rem;
+          max-width: 600px;
+        }
+
+        .section {
+          padding: 100px 0;
+        }
+
+        .section-header {
+          text-align: center;
+          margin-bottom: 60px;
+        }
+
+        .section-subtitle {
+          color: var(--accent-color);
+          font-size: 1.1rem;
+          font-weight: 600;
+          margin-bottom: 1rem;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+        }
+
+        .section h2 {
+          font-size: 2.5rem;
+          color: var(--primary-color);
+          margin-bottom: 1.5rem;
+        }
+
+        .services {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 40px;
+        }
+
+        .card {
+          background: var(--secondary-color);
+          padding: 40px;
+          border-radius: 15px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+          transition: all 0.3s ease;
+          border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .card:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 20px 40px rgba(0, 195, 255, 0.1);
+          border-color: var(--accent-color);
+        }
+
+        .card h3 {
+          color: var(--accent-color);
+          font-size: 1.5rem;
+          margin-bottom: 1.5rem;
+          font-weight: 600;
+        }
+
+        .card p {
+          color: var(--light-text);
+          font-size: 1.1rem;
+        }
+
+        .cta-button {
+          display: inline-block;
+          padding: 1.2rem 2.5rem;
+          background: var(--accent-color);
+          color: var(--white);
+          text-decoration: none;
+          border-radius: 50px;
+          font-weight: 500;
+          transition: all 0.3s ease;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          font-size: 0.9rem;
+        }
+
+        .cta-button:hover {
+          background: var(--primary-color);
+          transform: translateY(-2px);
+        }
+
+        .contact-section {
+          background: var(--dark-bg);
+          padding: 120px 0;
+        }
+
+        .contact-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 60px;
+          align-items: center;
+        }
+
+        .contact-info {
+          text-align: left;
+        }
+
+        .contact-info h2 {
+          font-size: 2.5rem;
+          margin-bottom: 2rem;
+          color: var(--accent-color);
+        }
+
+        .contact-details p {
+          margin: 1.5rem 0;
+          font-size: 1.1rem;
+          color: var(--light-text);
+        }
+
+        footer {
+          background: var(--dark-bg);
+          color: var(--white);
+          padding: 80px 0 40px;
+          border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-content {
+          display: grid;
+          grid-template-columns: 2fr 1fr 1fr;
+          gap: 60px;
+          margin-bottom: 60px;
+        }
+
+        .footer-info h3 {
+          font-size: 1.5rem;
+          margin-bottom: 1.5rem;
+          color: var(--accent-color);
+        }
+
+        .footer-links h4 {
+          font-size: 1.2rem;
+          margin-bottom: 1.5rem;
+          color: var(--accent-color);
+        }
+
+        .footer-links ul {
+          list-style: none;
+        }
+
+        .footer-links li {
+          margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+          color: var(--light-text);
+          text-decoration: none;
+          transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+          color: var(--accent-color);
+        }
+
+        .footer-bottom {
+          padding-top: 40px;
+          border-top: 1px solid rgba(255, 255, 255, 0.05);
+          text-align: center;
+          font-size: 0.9rem;
+          color: var(--light-text);
+        }
+
+        @media (max-width: 1200px) {
+          .services {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        @media (max-width: 992px) {
+          .hero-content {
+            grid-template-columns: 1fr;
+            text-align: center;
+          }
+
+          .hero-text {
+            text-align: center;
+          }
+
+          .hero p {
+            margin: 0 auto 3rem;
+          }
+
+          .contact-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .footer-content {
+            grid-template-columns: 1fr;
+            gap: 40px;
+          }
+
+          .about-grid {
+            grid-template-columns: 1fr !important;
+          }
+
+          .badges-container {
+            justify-content: center;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .header-content {
+            flex-direction: column;
+            text-align: center;
+          }
+
+          nav {
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+          }
+
+          .hero h2 {
+            font-size: 2.5rem;
+          }
+
+          .services {
+            grid-template-columns: 1fr;
+          }
+
+          .section {
+            padding: 60px 0;
+          }
+        }
     </style>
   </head>
   <body>
     <header>
       <div class="container">
         <div class="header-content">
-          <h1>Test Bootcamp Projects</h1>
+          <div class="logo-container">
+            <img
+              src="assets/logo-A1aKOG74QWhboeLG.png"
+              alt="Y5 Cloud Technologies Logo"
+            />
+            <h1>Y5 Cloud Technologies Ltd</h1>
+          </div>
           <nav>
             <a href="#home">Home</a>
             <a href="#about">About</a>
@@ -206,83 +453,405 @@
 
     <section id="home" class="hero">
       <div class="container">
-        <h2>Welcome to Test Bootcamp Projects</h2>
-        <p>
-          Building skills. Delivering solutions. Empowering future cloud
-          engineers.
-        </p>
-        <a href="#contact" class="cta-button">Get Started</a>
+        <div class="hero-content">
+          <div class="hero-text animate">
+            <h2>Supporting Cloud Engineers Since 2015</h2>
+            <p>
+              Delivering innovative cloud solutions and DevOps excellence to
+              transform your business with cutting-edge technology and expert
+              services.
+            </p>
+            <a href="#contact" class="cta-button">Start Your Journey</a>
+            <div class="badges-container">
+              <img
+                src="assets/aws-partner-badge_dark-dJo45nQRWjt4bkVo.png"
+                alt="AWS Partner"
+                class="badge"
+              />
+              <img
+                src="assets/thoropass_badges_soc-2-type-ii-green-500-brandless-m5KbLoaEOxswp1Ep.png"
+                alt="SOC 2 Type II Certified"
+                class="badge"
+              />
+            </div>
+          </div>
+          <div class="hero-image animate" style="animation-delay: 0.3s">
+            <img
+              src="assets/photo-1497409988347-cbfaac2f0b12"
+              alt="Cloud Technology"
+              style="
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+              "
+            />
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="about" class="section">
-      <div class="section-content">
-        <h2>About Us</h2>
-        <p style="text-align: center; max-width: 800px; margin: 0 auto">
-          Test Bootcamp Projects is a learning initiative showcasing cloud,
-          DevOps, and automation projects. We are committed to providing
-          hands-on experience with modern technologies and best practices. This
-          site demonstrates hosting with GitHub Pages and linking with a custom
-          domain
-          <strong>testbootcampprojects.website</strong>.
-        </p>
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Who We Are</span>
+          <h2>Excellence in Cloud Solutions</h2>
+        </div>
+        <div
+          class="about-grid"
+          style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+          "
+        >
+          <div>
+            <p
+              style="
+                font-size: 1.1rem;
+                color: var(--light-text);
+                margin-bottom: 2rem;
+              "
+            >
+              Y5 Cloud Technologies Ltd is a leading technology company
+              dedicated to delivering innovative cloud solutions, DevOps
+              services, and automation projects. Our mission is to provide
+              cutting-edge technology solutions and industry best practices.
+            </p>
+            <p
+              style="
+                font-size: 1.1rem;
+                color: var(--light-text);
+                margin-bottom: 2rem;
+              "
+            >
+              We help businesses transform their digital infrastructure through
+              our expertise in cloud computing and DevOps methodologies,
+              ensuring seamless integration and optimal performance.
+            </p>
+            <a href="#services" class="cta-button">Explore Our Services</a>
+          </div>
+          <div class="animate" style="animation-delay: 0.3s">
+            <img
+              src="assets/photo-1613575998061-0f59337425f2"
+              alt="Our Team"
+              style="
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+              "
+            />
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="services" class="section" style="background: var(--light-bg)">
-      <div class="section-content">
-        <h2>Our Services</h2>
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Our Services</span>
+          <h2>Professional Cloud Solutions</h2>
+        </div>
         <div class="services">
-          <div class="card">
-            <h3>Cloud Projects</h3>
+          <div class="card animate" style="animation-delay: 0.1s">
+            <img
+              src="assets/cloud-icon-j9K2m4L5nP8q.png"
+              alt="Cloud Solutions"
+              style="width: 60px; height: 60px; margin-bottom: 1.5rem"
+            />
+            <h3>Cloud Architecture</h3>
             <p>
-              Hands-on GCP and Terraform solutions with real-world scenarios.
-              Learn cloud architecture and infrastructure as code through
-              practical examples.
+              Expert cloud architecture solutions with AWS, Azure, and GCP.
+              Implement infrastructure as code and optimize your cloud resources
+              for maximum efficiency.
             </p>
           </div>
-          <div class="card">
-            <h3>DevOps CI/CD</h3>
+          <div class="card animate" style="animation-delay: 0.2s">
+            <img
+              src="assets/devops-icon-r7T6v9W2xY4z.png"
+              alt="DevOps Solutions"
+              style="width: 60px; height: 60px; margin-bottom: 1.5rem"
+            />
+            <h3>DevOps Excellence</h3>
             <p>
-              Master modern DevOps practices with hands-on experience in
-              building pipelines, containerization with Docker, and
-              orchestration using Kubernetes.
+              Streamline your development pipeline with modern DevOps practices.
+              Implement CI/CD, containerization, and Kubernetes orchestration
+              for seamless deployments.
             </p>
           </div>
-          <div class="card">
-            <h3>Learning Resources</h3>
+          <div class="card animate" style="animation-delay: 0.3s">
+            <img
+              src="assets/security-icon-h5B8c3N1mF6g.png"
+              alt="Security Solutions"
+              style="width: 60px; height: 60px; margin-bottom: 1.5rem"
+            />
+            <h3>Cloud Security</h3>
             <p>
-              Access comprehensive guides, practical cheat sheets, and
-              step-by-step tutorials designed to accelerate your learning
-              journey in cloud and DevOps.
+              Comprehensive cloud security solutions to protect your
+              infrastructure. Implement best practices, compliance measures, and
+              continuous monitoring.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section">
-      <div class="section-content">
-        <h2>Contact Us</h2>
-        <div class="contact-info">
-          <p>
-            Ready to start your cloud and DevOps journey? Get in touch with us!
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle">Contact Us</span>
+          <h2>Get IT Project Support</h2>
+          <p
+            class="lead"
+            style="
+              color: var(--light-text);
+              max-width: 800px;
+              margin: 2rem auto;
+            "
+          >
+            Looking for expert IT project team support? Contact Y5 Cloud
+            Technologies Ltd today. We provide skilled professionals for your
+            cloud infrastructure and DevOps projects.
           </p>
-          <p><strong>Email:</strong> info@testbootcampprojects.website</p>
-          <p><strong>Location:</strong> Toronto, Ontario</p>
-          <a href="mailto:info@testbootcampprojects.website" class="cta-button">
-            Reach Out Today
-          </a>
+        </div>
+        <div class="contact-grid">
+          <div
+            class="contact-form-container animate"
+            style="animation-delay: 0.1s"
+          >
+            <form
+              id="contactForm"
+              class="contact-form"
+              style="
+                background: var(--secondary-color);
+                padding: 3rem;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+              "
+            >
+              <div class="form-group" style="margin-bottom: 1.5rem">
+                <label
+                  for="name"
+                  style="
+                    display: block;
+                    margin-bottom: 0.5rem;
+                    color: var(--accent-color);
+                  "
+                  >Name *</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  style="
+                    width: 100%;
+                    padding: 1rem;
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    background: var(--dark-bg);
+                    color: var(--text-color);
+                    border-radius: 8px;
+                    font-size: 1rem;
+                  "
+                />
+              </div>
+              <div class="form-group" style="margin-bottom: 1.5rem">
+                <label
+                  for="company"
+                  style="
+                    display: block;
+                    margin-bottom: 0.5rem;
+                    color: var(--accent-color);
+                  "
+                  >Company Name *</label
+                >
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  required
+                  style="
+                    width: 100%;
+                    padding: 1rem;
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    background: var(--dark-bg);
+                    color: var(--text-color);
+                    border-radius: 8px;
+                    font-size: 1rem;
+                  "
+                />
+              </div>
+              <div class="form-group" style="margin-bottom: 1.5rem">
+                <label
+                  for="email"
+                  style="
+                    display: block;
+                    margin-bottom: 0.5rem;
+                    color: var(--accent-color);
+                  "
+                  >Email *</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  style="
+                    width: 100%;
+                    padding: 1rem;
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    background: var(--dark-bg);
+                    color: var(--text-color);
+                    border-radius: 8px;
+                    font-size: 1rem;
+                  "
+                />
+              </div>
+              <div class="form-group" style="margin-bottom: 1.5rem">
+                <label
+                  for="phone"
+                  style="
+                    display: block;
+                    margin-bottom: 0.5rem;
+                    color: var(--accent-color);
+                  "
+                  >Phone Number</label
+                >
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  style="
+                    width: 100%;
+                    padding: 1rem;
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    background: var(--dark-bg);
+                    color: var(--text-color);
+                    border-radius: 8px;
+                    font-size: 1rem;
+                  "
+                />
+              </div>
+              <div class="form-group" style="margin-bottom: 1.5rem">
+                <label
+                  for="message"
+                  style="
+                    display: block;
+                    margin-bottom: 0.5rem;
+                    color: var(--accent-color);
+                  "
+                  >Project Details *</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows="5"
+                  style="
+                    width: 100%;
+                    padding: 1rem;
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    background: var(--dark-bg);
+                    color: var(--text-color);
+                    border-radius: 8px;
+                    font-size: 1rem;
+                    resize: vertical;
+                  "
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="cta-button"
+                style="width: 100%; margin-top: 1rem"
+              >
+                Submit Request
+              </button>
+            </form>
+          </div>
+          <div class="contact-info animate" style="animation-delay: 0.3s">
+            <div
+              style="
+                background: var(--secondary-color);
+                padding: 3rem;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+              "
+            >
+              <h3
+                style="
+                  color: var(--accent-color);
+                  font-size: 1.8rem;
+                  margin-bottom: 2rem;
+                "
+              >
+                Our Office
+              </h3>
+              <div class="contact-details" style="margin-bottom: 2rem">
+                <p style="margin-bottom: 1.5rem">
+                  <strong style="color: var(--accent-color)"
+                    >Toronto Office</strong
+                  ><br />
+                  123 Tech Avenue<br />
+                  Suite 500<br />
+                  Toronto, ON M5V 2K4
+                </p>
+                <p style="margin-bottom: 1.5rem">
+                  <strong style="color: var(--accent-color)">Email</strong
+                  ><br />
+                  info@y5cloudtech.com
+                </p>
+                <p style="margin-bottom: 1.5rem">
+                  <strong style="color: var(--accent-color)">Phone</strong
+                  ><br />
+                  +1 (416) 555-0123
+                </p>
+                <p>
+                  <strong style="color: var(--accent-color)"
+                    >Working Hours</strong
+                  ><br />
+                  Monday - Friday<br />
+                  9:00 AM - 6:00 PM
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <footer>
       <div class="container">
-        <p>© 2025 Test Bootcamp Projects. All Rights Reserved.</p>
-        <p style="margin-top: 1rem; font-size: 0.9rem">
-          Empowering the next generation of cloud engineers
-        </p>
+        <div class="footer-content">
+          <div class="footer-info">
+            <h3>Y5 Cloud Technologies Ltd</h3>
+            <p>
+              Empowering businesses through innovative cloud solutions and
+              cutting-edge DevOps practices.
+            </p>
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#services">Cloud Projects</a></li>
+              <li><a href="#services">DevOps CI/CD</a></li>
+              <li><a href="#services">Learning Resources</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2015-2025 Y5 Cloud Technologies Ltd. All Rights Reserved.</p>
+        </div>
       </div>
     </footer>
   </body>
