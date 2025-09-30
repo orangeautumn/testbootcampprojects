@@ -25,6 +25,7 @@
         --primary-color: #1a1a1a;
         --secondary-color: #252525;
         --accent-color: #00c3ff;
+        --menu-width: 250px; /* Width of the side menu */
         --text-color: #ffffff;
         --light-bg: #252525;
         --light-text: #b3b3b3;
@@ -69,38 +70,43 @@
       header {
         background: var(--primary-color);
         color: var(--text-color);
-        padding: 1.5rem 0;
+        padding: 0.3rem 0;
         position: fixed;
         width: 100%;
         top: 0;
         z-index: 1000;
       }
 
+      /* Add padding to body to prevent content from hiding under fixed header */
+      body {
+        padding-top: 68px;
+      }
+
       .logo-container {
         display: flex;
         align-items: center;
-        gap: 1rem;
+        gap: 0.6rem;
       }
 
       .logo-container img {
-        height: 65px;
-        width: 65px;
+        height: 60px;
+        width: 60px;
       }
 
       .logo-container .logo-svg {
-        height: 65px;
-        width: 65px;
+        height: 60px;
+        width: 60px;
       }
 
       .logo-container h1 {
-        font-size: 1.5rem;
+        font-size: 18px;
         font-weight: 600;
         color: white;
       }
 
       .main-nav {
         display: flex;
-        gap: 3rem;
+        gap: 2rem;
       }
 
       .main-nav a {
@@ -138,6 +144,21 @@
         padding: 0 30px;
       }
 
+      @media (max-width: 768px) {
+        .container {
+          padding: 0 15px;
+          max-width: 100%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 0 8px;
+          width: 100%;
+          margin: 0 auto;
+        }
+      }
+
       .header-content {
         display: flex;
         justify-content: space-between;
@@ -153,7 +174,7 @@
 
       nav {
         display: flex;
-        gap: 3rem;
+        gap: 2rem;
       }
 
       nav a {
@@ -289,14 +310,14 @@
 
       .cta-button {
         display: inline-block;
-        padding: 1rem 2rem;
+        padding: 0.75rem 1.6rem;
         background: var(--accent-color);
         color: white;
         text-decoration: none;
-        border-radius: 30px;
+        border-radius: 24px;
         font-weight: 500;
         transition: all 0.3s ease;
-        font-size: 1rem;
+        font-size: 0.95rem;
       }
 
       .cta-button:hover {
@@ -312,7 +333,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 60px;
-        align-items: center;
+        align-items: start;
       }
 
       .contact-info {
@@ -405,6 +426,19 @@
 
         .contact-grid {
           grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
+        .contact-section {
+          padding: 60px 0;
+        }
+
+        .contact-form {
+          padding: 1.5rem !important;
+        }
+
+        .header-content {
+          gap: 0.5rem;
         }
 
         .footer-content {
@@ -421,17 +455,222 @@
         }
       }
 
-      @media (max-width: 768px) {
-        .header-content {
-          flex-direction: column;
-          text-align: center;
+      @media (max-width: 480px) {
+        .logo-container {
+          margin: 8px 0;
+          gap: 0.6rem;
         }
 
-        nav {
-          margin-top: 1.5rem;
-          flex-wrap: wrap;
-          justify-content: center;
-          gap: 1.5rem;
+        .logo-container img,
+        .logo-container .logo-svg {
+          height: 40px;
+          width: 40px;
+        }
+
+        .logo-container h1 {
+          font-size: 18px;
+          white-space: nowrap;
+        }
+
+        .contact-form {
+          padding: 1rem !important;
+          width: 100%;
+          margin: 0 auto;
+          box-sizing: border-box;
+        }
+
+        .contact-form-container {
+          width: 100%;
+          margin: 0 auto;
+          padding: 0 1rem;
+          box-sizing: border-box;
+        }
+
+        .form-group {
+          margin-bottom: 1rem !important;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+          padding: 0.6rem !important;
+          font-size: 0.9rem !important;
+          width: 100% !important;
+          max-width: 100% !important;
+          box-sizing: border-box !important;
+        }
+
+        .contact-section .section-header h2 {
+          font-size: 2rem;
+        }
+
+        .contact-section .lead {
+          font-size: 0.9rem;
+          padding: 0 1rem;
+        }
+
+        .contact-info > div {
+          padding: 1.5rem !important;
+          width: 95%;
+          margin: 0 auto;
+        }
+
+        #about .about-grid {
+          gap: 2rem;
+        }
+
+        #about .about-grid > * {
+          padding: 0 1rem;
+        }
+
+        .hero {
+          padding: 100px 0 50px;
+        }
+
+        .hero h2 {
+          font-size: 2rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+          margin-bottom: 2rem;
+        }
+
+        .section {
+          padding: 40px 0;
+        }
+
+        .section-header {
+          margin-bottom: 30px;
+        }
+
+        .section h2 {
+          font-size: 1.8rem;
+        }
+
+        .card {
+          padding: 25px;
+        }
+
+        .contact-grid {
+          gap: 30px;
+        }
+
+        .cta-button {
+          padding: 0.65rem 1.4rem;
+          font-size: 0.9rem;
+          border-radius: 20px;
+        }
+      }
+
+      .menu-toggle {
+        display: none;
+      }
+
+      @media (min-width: 769px) {
+        .menu-toggle {
+          display: none !important;
+        }
+      }
+
+      .menu-toggle span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background-color: var(--white);
+        margin: 4px 0;
+        transition: all 0.3s ease;
+        border-radius: 2px;
+      }
+
+      @media (max-width: 768px) {
+        body {
+          padding-top: 68px;
+        }
+
+        .header-content {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .menu-toggle {
+          display: block;
+          order: 3;
+          position: relative;
+          z-index: 1002;
+          padding: 6px;
+          cursor: pointer;
+        }
+
+        nav.main-nav {
+          position: fixed;
+          top: 0;
+          right: calc(-1 * var(--menu-width));
+          width: var(--menu-width);
+          height: 100vh;
+          background: rgba(0, 0, 0, 0.95);
+          flex-direction: column;
+          padding: 100px 40px 40px;
+          transition: transform 0.3s ease;
+          z-index: 1000;
+          transform: translateX(0);
+        }
+
+        nav.main-nav.active {
+          transform: translateX(calc(-1 * var(--menu-width)));
+        }
+
+        nav.main-nav a {
+          padding: 15px 0;
+          width: 100%;
+          text-align: right;
+          font-size: 1.2rem;
+          font-weight: 400;
+          color: #fff;
+          border: none;
+          transition: color 0.3s ease;
+        }
+
+        nav.main-nav a:hover {
+          color: var(--accent-color);
+        }
+
+        .menu-toggle span {
+          transition: all 0.3s ease;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+          transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+          opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+          transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        .logo-container {
+          width: auto;
+        }
+
+        .overlay {
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5);
+          z-index: 999;
+        }
+
+        .overlay.active {
+          display: block;
         }
 
         .hero h2 {
@@ -446,12 +685,36 @@
           padding: 60px 0;
         }
       }
+
+      /* Prevent overflow in the office/contact card */
+      .contact-details,
+      .contact-details p,
+      .contact-details a {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+        hyphens: auto;
+      }
+
+      @media (max-width: 480px) {
+        .contact-info > div {
+          padding: 1.25rem;
+        }
+        .contact-details p {
+          margin-bottom: 1.1rem;
+        }
+      }
     </style>
   </head>
   <body>
+    <div class="overlay"></div>
     <header>
       <div class="container">
         <div class="header-content">
+          <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
           <div class="logo-container">
             <img
               src="assets/y5-cloud-technologies-logo.svg"
@@ -469,6 +732,43 @@
         </div>
       </div>
     </header>
+
+    <script>
+      // Get DOM elements
+      const menuToggle = document.querySelector(".menu-toggle");
+      const mainNav = document.querySelector(".main-nav");
+      const overlay = document.querySelector(".overlay");
+      const menuLinks = document.querySelectorAll(".main-nav a");
+
+      // Function to close menu
+      function closeMenu() {
+        mainNav.classList.remove("active");
+        overlay.classList.remove("active");
+        menuToggle.classList.remove("active");
+      }
+
+      // Toggle menu on button click
+      menuToggle.addEventListener("click", function () {
+        mainNav.classList.toggle("active");
+        overlay.classList.toggle("active");
+        menuToggle.classList.toggle("active");
+      });
+
+      // Close menu when clicking overlay
+      overlay.addEventListener("click", closeMenu);
+
+      // Close menu when clicking nav links
+      menuLinks.forEach((link) => {
+        link.addEventListener("click", closeMenu);
+      });
+
+      // Close menu when window is resized to desktop size
+      window.addEventListener("resize", function () {
+        if (window.innerWidth > 768) {
+          closeMenu();
+        }
+      });
+    </script>
 
     <section id="home" class="hero">
       <div class="container">
@@ -648,9 +948,10 @@
                   style="
                     display: block;
                     margin-bottom: 0.5rem;
-                    color: var(--accent-color);
+                    color: var(--white);
+                    font-weight: 500;
                   "
-                  >Name *</label
+                  >Name <span style="color: var(--accent-color)">*</span></label
                 >
                 <input
                   type="text"
@@ -659,12 +960,13 @@
                   required
                   style="
                     width: 100%;
-                    padding: 1rem;
+                    padding: 0.8rem;
                     border: 1px solid rgba(255, 255, 255, 0.1);
                     background: var(--dark-bg);
                     color: var(--text-color);
-                    border-radius: 8px;
+                    border-radius: 6px;
                     font-size: 1rem;
+                    transition: border-color 0.3s ease;
                   "
                 />
               </div>
@@ -674,9 +976,11 @@
                   style="
                     display: block;
                     margin-bottom: 0.5rem;
-                    color: var(--accent-color);
+                    color: var(--white);
+                    font-weight: 500;
                   "
-                  >Company Name *</label
+                  >Company Name
+                  <span style="color: var(--accent-color)">*</span></label
                 >
                 <input
                   type="text"
@@ -685,12 +989,13 @@
                   required
                   style="
                     width: 100%;
-                    padding: 1rem;
+                    padding: 0.8rem;
                     border: 1px solid rgba(255, 255, 255, 0.1);
                     background: var(--dark-bg);
                     color: var(--text-color);
-                    border-radius: 8px;
+                    border-radius: 6px;
                     font-size: 1rem;
+                    transition: border-color 0.3s ease;
                   "
                 />
               </div>
@@ -700,9 +1005,11 @@
                   style="
                     display: block;
                     margin-bottom: 0.5rem;
-                    color: var(--accent-color);
+                    color: var(--white);
+                    font-weight: 500;
                   "
-                  >Email *</label
+                  >Email
+                  <span style="color: var(--accent-color)">*</span></label
                 >
                 <input
                   type="email"
@@ -711,12 +1018,13 @@
                   required
                   style="
                     width: 100%;
-                    padding: 1rem;
+                    padding: 0.8rem;
                     border: 1px solid rgba(255, 255, 255, 0.1);
                     background: var(--dark-bg);
                     color: var(--text-color);
-                    border-radius: 8px;
+                    border-radius: 6px;
                     font-size: 1rem;
+                    transition: border-color 0.3s ease;
                   "
                 />
               </div>
@@ -726,7 +1034,8 @@
                   style="
                     display: block;
                     margin-bottom: 0.5rem;
-                    color: var(--accent-color);
+                    color: var(--white);
+                    font-weight: 500;
                   "
                   >Phone Number</label
                 >
@@ -736,12 +1045,13 @@
                   name="phone"
                   style="
                     width: 100%;
-                    padding: 1rem;
+                    padding: 0.8rem;
                     border: 1px solid rgba(255, 255, 255, 0.1);
                     background: var(--dark-bg);
                     color: var(--text-color);
-                    border-radius: 8px;
+                    border-radius: 6px;
                     font-size: 1rem;
+                    transition: border-color 0.3s ease;
                   "
                 />
               </div>
@@ -751,9 +1061,11 @@
                   style="
                     display: block;
                     margin-bottom: 0.5rem;
-                    color: var(--accent-color);
+                    color: var(--white);
+                    font-weight: 500;
                   "
-                  >Project Details *</label
+                  >Project Details
+                  <span style="color: var(--accent-color)">*</span></label
                 >
                 <textarea
                   id="message"
@@ -762,20 +1074,26 @@
                   rows="5"
                   style="
                     width: 100%;
-                    padding: 1rem;
+                    padding: 0.8rem;
                     border: 1px solid rgba(255, 255, 255, 0.1);
                     background: var(--dark-bg);
                     color: var(--text-color);
-                    border-radius: 8px;
+                    border-radius: 6px;
                     font-size: 1rem;
                     resize: vertical;
+                    transition: border-color 0.3s ease;
                   "
                 ></textarea>
               </div>
               <button
                 type="submit"
                 class="cta-button"
-                style="width: 100%; margin-top: 1rem"
+                style="
+                  width: 100%;
+                  margin-top: 1rem;
+                  padding: 0.6rem 1.2rem;
+                  font-size: 0.9rem;
+                "
               >
                 Submit Request
               </button>
@@ -828,7 +1146,15 @@
                 <p style="margin-bottom: 1.5rem">
                   <strong style="color: var(--accent-color)">Email</strong
                   ><br />
-                  info@y5cloudtechnologies.com
+                  <a
+                    href="mailto:info@y5cloudtechnologies.com"
+                    style="
+                      color: var(--light-text);
+                      text-decoration: none;
+                      word-break: break-all;
+                    "
+                    >info@y5cloudtechnologies.com</a
+                  >
                 </p>
                 <p>
                   <strong style="color: var(--accent-color)"
