@@ -55,6 +55,11 @@
         box-sizing: border-box;
       }
 
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 90px;
+      }
+
       body {
         font-family: "Poppins", sans-serif;
         color: var(--text-color);
@@ -145,6 +150,10 @@
       }
 
       @media (max-width: 768px) {
+        html {
+          scroll-padding-top: 80px;
+        }
+
         .container {
           padding: 0 15px;
           max-width: 100%;
@@ -236,11 +245,21 @@
         text-align: left;
       }
 
-      .hero h2 {
-        font-size: 4rem;
-        line-height: 1.2;
-        margin-bottom: 2rem;
+      .hero-subtitle {
+        display: inline-block;
+        font-size: 1.1rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
         color: var(--accent-color);
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      .hero h2 {
+        font-size: 3.6rem;
+        line-height: 1.15;
+        margin-bottom: 1.5rem;
+        color: var(--text-color);
         font-weight: 700;
       }
 
@@ -528,9 +547,15 @@
           padding: 100px 0 50px;
         }
 
+        .hero-subtitle {
+          font-size: 0.85rem;
+          letter-spacing: 0.1em;
+          margin-bottom: 0.75rem;
+        }
+
         .hero h2 {
-          font-size: 2rem;
-          margin-bottom: 1.5rem;
+          font-size: 1.8rem;
+          margin-bottom: 1.2rem;
         }
 
         .hero p {
@@ -774,11 +799,14 @@
       <div class="container">
         <div class="hero-content">
           <div class="hero-text animate">
-            <h2>Supporting companies in Canada Since 2015</h2>
+            <span class="hero-subtitle">Y5 Cloud Technologies</span>
+            <h2>Supporting Companies in Canada Since 2015</h2>
             <p>
-              Delivering innovative cloud solutions and DevOps excellence to
-              transform your business with cutting-edge technology and expert
-              services.
+              Y5 Cloud Technologies Ltd. specializes in delivering high-quality
+              cloud engineering, DevOps automation, and modern platform
+              solutions. We design resilient systems, optimize infrastructure,
+              and provide comprehensive technology support to keep your teams
+              shipping with confidence.
             </p>
             <a href="#contact" class="cta-button">Start Your Journey</a>
           </div>
